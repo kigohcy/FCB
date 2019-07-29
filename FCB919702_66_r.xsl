@@ -159,7 +159,7 @@
 				</xsl:element>
 				
 				<xsl:element name="Column">
-					<xsl:attribute name="name"> <xsl:value-of select="'twoFATelNo'"/></xsl:attribute>
+					<xsl:attribute name="name"> <xsl:value-of select="'TFATelNo'"/></xsl:attribute>
 					<xsl:attribute name="value"><xsl:value-of select="TxRs/TFATelNo"/></xsl:attribute>
 				</xsl:element>
 			</xsl:element>								
