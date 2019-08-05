@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/18 11:38:45 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.BaseLimt" table="BASE_LIMT">
+        <id name="grad" type="java.lang.String">
+            <column name="GRAD" />
+            <generator class="assigned" />
+        </id>
+        <property name="trnsLimt" type="java.lang.Long">
+            <column name="TRNS_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="mnthLimt" type="java.lang.Long">
+            <column name="MNTH_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="dayLimt" type="java.lang.Long">
+            <column name="DAY_LIMT" precision="15" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

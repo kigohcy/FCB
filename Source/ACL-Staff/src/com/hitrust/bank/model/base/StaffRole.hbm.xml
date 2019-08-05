@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Generated Nov 16, 2015 1:52:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.hitrust.bank.model">
+    <class name="StaffRole" table="STAFF_ROLE">
+        <id name="roleId" column="ROLE_ID" type="java.lang.String" length="10">
+            <generator class="assigned" />
+        </id>
+        
+        <property name="roleName" column="ROLE_NAME" type="java.lang.String" length="10" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hitrust.acl.model.MnthCrdtCont" table="MNTH_CRDT_CONT">
+        <composite-id name="id" class="com.hitrust.acl.model.base.AbstractMnthCrdtCont$Id">
+            <key-property name="acntIndt" type="java.lang.String">
+                <column name="ACNT_INDT" />
+            </key-property>
+            <key-property name="trnsMnth" type="java.lang.String">
+                <column name="TRNS_MNTH" />
+            </key-property>
+        </composite-id>
+
+        <property name="custId" type="java.lang.String">
+            <column name="CUST_ID" />
+        </property>
+        <property name="ecId" type="java.lang.String">
+            <column name="EC_ID" />
+        </property>
+        <property name="ecUser" type="java.lang.String">
+            <column name="EC_USER" />
+        </property>
+        <property name="realAcnt" type="java.lang.String">
+            <column name="REAL_ACNT" />
+        </property>
+        <property name="mnthCont" type="java.lang.Long">
+            <column name="MNTH_CONT" precision="15" scale="0" />
+        </property>
+        <property name="custSerl" type="java.lang.String">
+            <column name="CUST_SERL" />
+        </property>
+    </class>
+</hibernate-mapping>

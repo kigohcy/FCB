@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.acl.model.EcData" table="EC_DATA">
+        <id name="ecId" type="java.lang.String">
+            <column name="EC_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="ecNameCh" type="java.lang.String">
+            <column name="EC_NAME_CH" />
+        </property>
+        <property name="ecNameEn" type="java.lang.String">
+            <column name="EC_NAME_EN" />
+        </property>
+        <property name="sorcIp" type="java.lang.String">
+            <column name="SORC_IP" />
+        </property>
+        <property name="feeType" type="java.lang.String">
+            <column name="FEE_TYPE" />
+        </property>
+        <property name="feeRate" type="java.lang.Double">
+            <column name="FEE_RATE" precision="7" />
+        </property>
+        <property name="stts" type="java.lang.String">
+            <column name="STTS" />
+        </property>
+        <property name="realAcnt" type="java.lang.String">
+            <column name="REAL_ACNT" />
+        </property>
+        <property name="entrNo" type="java.lang.String">
+            <column name="ENTR_NO" />
+        </property>
+        <property name="showRealAcnt" type="java.lang.String">
+            <column name="SHOW_REAL_ACNT" />
+        </property>
+        <property name="linkLimit" type="java.lang.Integer">
+            <column name="LINK_LIMIT" />
+        </property>
+        <property name="entrId" type="java.lang.String">
+            <column name="ENTR_ID" />
+        </property>
+        <property name="cntc" type="java.lang.String">
+            <column name="CNTC" />
+        </property>
+        <property name="tel" type="java.lang.String">
+            <column name="TEL" />
+        </property>
+        <property name="mail" type="java.lang.String">
+            <column name="MAIL" />
+        </property>
+        <property name="note" type="java.lang.String">
+            <column name="NOTE" />
+        </property>
+        <property name="cretUser" type="java.lang.String">
+            <column name="CRET_USER" />
+        </property>
+        <property name="cretDttm" type="java.util.Date">
+            <column name="CRET_DTTM" />
+        </property>
+        <property name="mdfyUser" type="java.lang.String">
+            <column name="MDFY_USER" />
+        </property>
+        <property name="mdfyDttm" type="java.util.Date">
+            <column name="MDFY_DTTM" />
+        </property>
+        <property name="showSerl" type="java.lang.Integer">
+            <column name="SHOW_SERL" />
+        </property>
+        <property name="maxFee" type="java.lang.Integer">
+            <column name="MAX_FEE" />
+        </property>
+        <property name="minFee" type="java.lang.Integer">
+            <column name="MIN_FEE" />
+        </property>
+        <property name="actvSendId" type="java.lang.String">
+            <column name="ACTV_SEND_ID" />
+        </property>
+        <property name="actvAprvId" type="java.lang.String">
+            <column name="ACTV_APRV_ID" />
+        </property>
+        <property name="actvAprvDttm" type="java.util.Date">
+            <column name="ACTV_APRV_DTTM" />
+        </property>
+        <property name="trmnSendId" type="java.lang.String">
+            <column name="TRMN_SEND_ID" />
+        </property>
+        <property name="trmnAprvId" type="java.lang.String">
+            <column name="TRMN_APRV_ID" />
+        </property>
+        <property name="trmnAprvDttm" type="java.util.Date">
+            <column name="TRMN_APRV_DTTM" />
+        </property>
+        <property name="taxType" type="java.lang.String">
+            <column name="TAX_TYPE" />
+        </property>
+        <property name="taxRate" type="java.lang.Double">
+            <column name="TAX_RATE" precision="7" />
+        </property>
+        <property name="maxTax" type="java.lang.Integer">
+            <column name="MAX_TAX" />
+        </property>
+        <property name="minTax" type="java.lang.Integer">
+            <column name="MIN_TAX" />
+        </property>
+    </class>
+</hibernate-mapping>

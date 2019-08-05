@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.acl.model.TrnsData" table="TRNS_DATA">
+         <composite-id name="id" class="com.hitrust.acl.model.base.AbstractTrnsData$Id">
+            <key-property name="ecId" type="java.lang.String">
+                <column name="EC_ID" />
+            </key-property>
+            <key-property name="ecMsgNo" type="java.lang.String">
+                <column name="EC_MSG_NO" />
+            </key-property>
+        </composite-id>
+        <property name="custId" type="java.lang.String">
+            <column name="CUST_ID" />
+        </property>
+        <property name="custSerl" type="java.lang.String">
+            <column name="CUST_SERL" />
+        </property>
+        <property name="ecUser" type="java.lang.String">
+            <column name="EC_USER" />
+        </property>
+        <property name="trnsType" type="java.lang.String">
+            <column name="TRNS_TYPE" />
+        </property>
+        <property name="realAcnt" type="java.lang.String">
+            <column name="REAL_ACNT" />
+        </property>
+        <property name="recvAcnt" type="java.lang.String">
+            <column name="RECV_ACNT" />
+        </property>
+        <property name="trnsDttm" type="java.util.Date">
+            <column name="TRNS_DTTM" />
+        </property>
+        <property name="trnsAmnt" type="java.lang.Long">
+            <column name="TRNS_AMNT" precision="15" scale="0" />
+        </property>
+        <property name="trnsStts" type="java.lang.String">
+            <column name="TRNS_STTS" />
+        </property>
+        <property name="ordrNo" type="java.lang.String">
+            <column name="ORDR_NO" />
+        </property>
+        <property name="backAmnt" type="java.lang.Long">
+            <column name="BACK_AMNT" precision="15" scale="0" />
+        </property>
+        <property name="trnsNote" type="java.lang.String">
+            <column name="TRNS_NOTE" />
+        </property>
+        <property name="errCode" type="java.lang.String">
+            <column name="ERR_CODE" />
+        </property>
+        <property name="hostCode" type="java.lang.String">
+            <column name="HOST_CODE" />
+        </property>
+        <property name="hostSeq" type="java.lang.String">
+            <column name="HOST_SEQ" />
+        </property>
+        <property name="feeType" type="java.lang.String">
+            <column name="FEE_TYPE" />
+        </property>
+        <property name="feeRate" type="java.lang.Double">
+            <column name="FEE_RATE" precision="7" />
+        </property>
+        <property name="feeAmnt" type="java.lang.Long">
+            <column name="FEE_AMNT" precision="15" scale="0" />
+        </property>
+        <property name="acntIndt" type="java.lang.String">
+            <column name="ACNT_INDT" />
+        </property>
+        <property name="mdfyDttm" type="java.util.Date">
+            <column name="MDFY_DTTM" />
+        </property>
+        <property name="mailNotc" type="java.lang.String">
+            <column name="MAIL_NOTC" />
+        </property>
+        <property name="mailDttm" type="java.util.Date">
+            <column name="MAIL_DTTM" />
+        </property>
+        <property name="teleNo" type="java.lang.String">
+            <column name="TELE_NO " />
+        </property>
+                <property name="tiTa" type="java.lang.String">
+            <column name="TITA" />
+        </property>
+        <property name="toTa" type="java.lang.String">
+            <column name="TOTA" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.acl.model.CustPltf" table="CUST_PLTF">
+        <composite-id name="id" class="com.hitrust.acl.model.base.AbstractCustPltf$Id">
+            <key-property name="custId" type="java.lang.String">
+                <column name="CUST_ID" />
+            </key-property>
+            <key-property name="ecId" type="java.lang.String">
+                <column name="EC_ID" />
+            </key-property>
+        </composite-id>
+        <property name="stts" type="java.lang.String">
+            <column name="STTS" />
+        </property>
+        <property name="sttsDttm" type="java.util.Date">
+            <column name="STTS_DTTM" />
+        </property>
+        <property name="cretDttm" type="java.util.Date">
+            <column name="CRET_DTTM" />
+        </property>
+        <property name="mdfyUser" type="java.lang.String">
+            <column name="MDFY_USER" />
+        </property>
+    </class>
+</hibernate-mapping>

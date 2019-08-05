@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/6/6 02:34:35 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.NewsImag" table="NEWS_IMAG">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractNewsImag$Id">
+            <key-property name="seq" type="java.lang.String">
+                <column name="SEQ" />
+            </key-property>
+            <key-property name="fileName" type="java.lang.String">
+                <column name="FILE_NAME" />
+            </key-property>
+        </composite-id>
+        <property name="imag" type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+            <column name="IMAG" not-null="true" />
+        </property>
+        <property name="mdfyUser" type="java.lang.String">
+            <column name="MDFY_USER" />
+        </property>
+        <property name="mdfyDttm" type="java.util.Date">
+            <column name="MDFY_DTTM" />
+        </property>
+        <property name="deltFlag" type="java.lang.String">
+            <column name="DELT_FLAG" />
+        </property>
+    </class>
+</hibernate-mapping>

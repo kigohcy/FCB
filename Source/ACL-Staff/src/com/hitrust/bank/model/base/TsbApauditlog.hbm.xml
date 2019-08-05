@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 18, 2016 10:19:37 AM by Hibernate Tools 3.5.0.Final -->
+
+<hibernate-mapping package="com.hitrust.bank.model">
+    <class name="TsbApauditlog" table="TSB_APAUDITLOG">
+    	
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractTsbApauditlog$Id">
+            <key-property name="projCode" 		column="PROJ_CODE" 		type="java.lang.String" />
+            <key-property name="userId" 		column="USER_ID" 		type="java.lang.String"/>
+            <key-property name="procDatetime" 	column="PROC_DATETIME" 	type="java.lang.String"/>
+            <key-property name="clientIp" 		column="CLIENT_IP" 		type="java.lang.String"/>
+            <key-property name="fnType" 		column="FN_TYPE" 		type="java.lang.String"/>
+            <key-property name="fnName" 		column="FN_NAME" 		type="java.lang.String"/>
+            <key-property name="fnStts" 		column="FN_STTS" 		type="java.lang.String"/>
+            <key-property name="fnKeyvalue" 	column="FN_KEYVALUE" 	type="java.lang.String"/>
+            <key-property name="fnProc" 		column="FN_PROC" 		type="java.lang.String"/>
+        </composite-id>
+    </class>
+</hibernate-mapping>

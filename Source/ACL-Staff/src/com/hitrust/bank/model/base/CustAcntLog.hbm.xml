@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.CustAcntLog" table="CUST_ACNT_LOG">
+        <id name="logNo" type="java.lang.String">
+            <column name="LOG_NO" />
+            <generator class="assigned" />
+        </id>
+        <property name="custId" type="java.lang.String">
+            <column name="CUST_ID" />
+        </property>
+        <property name="ecId" type="java.lang.String">
+            <column name="EC_ID" />
+        </property>
+        <property name="ecUser" type="java.lang.String">
+            <column name="EC_USER" />
+        </property>
+        <property name="realAcnt" type="java.lang.String">
+            <column name="REAL_ACNT" />
+        </property>
+        <property name="cretDttm" type="java.util.Date">
+            <column name="CRET_DTTM" />
+        </property>
+        <property name="grad" type="java.lang.String">
+            <column name="GRAD" />
+        </property>
+        <property name="gradType" type="java.lang.String">
+            <column name="GRAD_TYPE" />
+        </property>
+        <property name="stts" type="java.lang.String">
+            <column name="STTS" />
+        </property>
+        <property name="errCode" type="java.lang.String">
+            <column name="ERR_CODE" />
+        </property>
+        <property name="hostCode" type="java.lang.String">
+            <column name="HOST_CODE" />
+        </property>
+        <property name="custSerl" type="java.lang.String">
+            <column name="CUST_SERL" />
+        </property>
+        <property name="acntIndt" type="java.lang.String">
+            <column name="ACNT_INDT" />
+        </property>
+        <property name="execSrc" type="java.lang.String">
+            <column name="EXEC_SRC" />
+        </property>
+        <property name="execUser" type="java.lang.String">
+            <column name="EXEC_USER" />
+        </property>
+        <property name="ecMsgNo" type="java.lang.String">
+            <column name="EC_MSG_NO" />
+        </property>
+        <property name="ip" type="java.lang.String">
+            <column name="IP" />
+        </property>
+    </class>
+</hibernate-mapping>

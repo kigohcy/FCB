@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.SysParm" table="SYS_PARM">
+        <id name="parmCode" type="java.lang.String">
+            <column name="PARM_CODE" />
+            <generator class="assigned" />
+        </id>
+        <property name="parmName" type="java.lang.String">
+            <column name="PARM_NAME" />
+        </property>
+        <property name="parmValue" type="java.lang.String">
+            <column name="PARM_VALUE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.StaffOptLog" table="STAFF_OPT_LOG">
+        <id name="logNo" type="java.lang.String">
+            <column name="LOG_NO" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="java.lang.String">
+            <column name="USER_ID" not-null="true" />
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME" not-null="true" />
+        </property>
+        <property name="fnctId" type="java.lang.String">
+            <column name="FNCT_ID" not-null="true" />
+        </property>
+        <property name="oprtDttm" type="java.util.Date">
+            <column name="OPRT_DTTM" not-null="true" />
+        </property>
+        <property name="action" type="java.lang.String">
+            <column name="ACTION" not-null="true" />
+        </property>
+        <property name="rslt" type="java.lang.String">
+            <column name="RSLT" not-null="true" />
+        </property>
+        <property name="ipAddr" type="java.lang.String">
+            <column name="IP_ADDR" />
+        </property>
+        <property name="beforeId" type="java.lang.String">
+            <column name="BEFORE_ID" />
+        </property>
+        <property name="afterId" type="java.lang.String">
+            <column name="AFTER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

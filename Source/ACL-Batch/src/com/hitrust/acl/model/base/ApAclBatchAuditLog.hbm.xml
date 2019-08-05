@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hitrust.acl.model.ApAclBatchAuditLog" table="AP_ACL_BATCH_AUDIT_LOG">
+        <composite-id name="id" class="com.hitrust.acl.model.base.AbstractApAclBatchAuditLog$Id">
+            <key-property name="batchId" type="java.lang.String">
+                <column name="BATCH_ID" />
+            </key-property>
+            <key-property name="startDatetime" type="java.lang.String">
+                <column name="Start_Datetime" />
+            </key-property>
+        </composite-id>
+        
+        <property name="systemCode" type="java.lang.String">
+            <column name="System_Code" />
+        </property>
+        <property name="batchName" type="java.lang.String">
+            <column name="BATCH_NAME" />
+        </property>
+        <property name="endDatetime" type="java.lang.String">
+            <column name="End_Datetime" />
+        </property>
+        <property name="txnStatusCode" type="java.lang.String">
+            <column name="Txn_Status_Code" />
+        </property>
+    </class>
+</hibernate-mapping>

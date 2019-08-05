@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.StaffSysFnct" table="STAFF_SYS_FNCT">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractStaffSysFnct$Id">
+            <key-property name="lngn" type="java.lang.String">
+                <column name="LNGN" />
+            </key-property>
+            <key-property name="fnctId" type="java.lang.String">
+                <column name="FNCT_ID" />
+            </key-property>
+        </composite-id>
+        <property name="menuId" type="java.lang.String">
+            <column name="MENU_ID" not-null="true" />
+        </property>
+        <property name="fnctName" type="java.lang.String">
+            <column name="FNCT_NAME" not-null="true" />
+        </property>
+        <property name="isUse" type="java.lang.String">
+            <column name="IS_USE" not-null="true" />
+        </property>
+        <property name="isSet" type="java.lang.String">
+            <column name="IS_SET" not-null="true" />
+        </property>
+        <property name="url" type="java.lang.String">
+            <column name="URL" />
+        </property>
+        <property name="serl" type="java.lang.Integer">
+            <column name="SERL" />
+        </property>
+    </class>
+</hibernate-mapping>

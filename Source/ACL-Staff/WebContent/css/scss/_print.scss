@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* 列印 ======================================================================================*/
+@media print {
+    @page {
+        padding: 10px 10px 10px 10px;
+        font-size: 9pt;
+    }
+    html,
+    body {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+    }
+    table th,
+    table td {
+        border: 1px solid #000;
+        padding: 0.5px;
+    }
+}

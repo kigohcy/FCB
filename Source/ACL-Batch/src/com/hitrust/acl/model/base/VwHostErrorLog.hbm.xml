@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.acl.model.VwHostErrorLog" table="VW_HOST_ERR_LOG">
+         <composite-id name="id" class="com.hitrust.acl.model.base.AbstractVwHostErrorLog$Id">
+            <key-property name="ecId" type="java.lang.String">
+                <column name="EC_ID" />
+            </key-property>
+            <key-property name="ecMsgNo" type="java.lang.String">
+                <column name="EC_MSG_NO" />
+            </key-property>
+        </composite-id>
+        <property name="ordrNo" type="java.lang.String">
+            <column name="ORDR_NO" />
+        </property>
+        <property name="trnsDttm" type="java.util.Date">
+            <column name="TRNS_DTTM" />
+        </property>
+        <property name="hostCode" type="java.lang.String">
+            <column name="HOST_CODE" />
+        </property>
+        <property name="codeDesc" type="java.lang.String">
+            <column name="CODE_DESC" />
+        </property>
+    </class>
+</hibernate-mapping>

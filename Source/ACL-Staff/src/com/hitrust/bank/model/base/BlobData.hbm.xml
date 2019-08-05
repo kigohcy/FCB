@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.BlobData" table="BLOB_DATA">
+        <id name="logNo" type="java.lang.String">
+            <column name="LOG_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="logType"  column="LOG_TYPE" type="java.lang.String" length="1" />
+        <property name="logData" type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+            <column name="LOG_DATA" />
+        </property>
+        <property name="oprtDttm" type="java.util.Date">
+            <column name="OPRT_DTTM" />
+        </property>
+    </class>
+</hibernate-mapping>

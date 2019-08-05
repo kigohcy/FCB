@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/7/25 12:52:49 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.Rfci301Svip" table="RFCI301_SVIP">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractRfci301Svip$Id">
+            <key-property name="id1Type" type="java.lang.String">
+                <column name="ID1_TYPE" />
+            </key-property>
+            <key-property name="id1No" type="java.lang.String">
+                <column name="ID1_NO" />
+            </key-property>
+            <key-property name="dataDate" type="java.util.Date">
+                <column name="DATA_DATE" />
+            </key-property>
+            <key-property name="custAcctNo" type="java.lang.String">
+                <column name="CUST_ACCT_NO" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

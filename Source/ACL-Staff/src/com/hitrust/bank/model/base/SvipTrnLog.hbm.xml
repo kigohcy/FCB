@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2016 3:35:41 PM by Hibernate Tools 3.5.0.Final -->
+
+<hibernate-mapping package="com.hitrust.bank.model">
+    <class name="SvipTrnLog" table="SVIP_TRN_LOG" >
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractSvipTrnLog$Id">
+            <key-property name="tranDate" 		column="TRAN_DATE" 		type="java.lang.String" 	length="8" />
+            <key-property name="tranTime" 		column="TRAN_TIME" 		type="java.lang.String" 	length="6" />
+            <key-property name="empNo" 			column="EMP_NO" 		type="java.lang.String" 	length="10" />
+            <key-property name="systemCode" 	column="SYSTEM_CODE" 	type="java.lang.String" 	length="10" />
+            <key-property name="systemName" 	column="SYSTEM_NAME" 	type="java.lang.String" 	length="4" />
+            <key-property name="custId" 		column="CUST_ID" 		type="java.lang.String" 	length="20" />
+            <key-property name="custName" 		column="CUST_NAME" 		type="java.lang.String" 	length="82" />
+            <key-property name="tranType" 		column="TRAN_TYPE" 		type="java.lang.String" 	length="30" />
+            <key-property name="tranSource" 	column="TRAN_SOURCE" 	type="java.lang.String" 	length="30" />
+            <key-property name="sysAcct" 		column="SYS_ACCT" 		type="java.lang.String" 	length="30" />
+            <key-property name="memo1" 			column="MEMO1" 			type="java.lang.String" 	length="40" />
+            <key-property name="memo2" 			column="MEMO2" 			type="java.lang.String" 	length="40" />
+            <key-property name="memo3" 			column="MEMO3" 			type="java.lang.String" 	length="40" />
+            <key-property name="rowid" 			column="ROWID" 			type="java.lang.Integer" />
+            <key-property name="procDate" 		column="PROC_DATE" 		type="java.util.Date" />
+            <key-property name="flag" 			column="FLAG" 			type="java.lang.Integer" />
+        </composite-id>
+    </class>
+</hibernate-mapping>

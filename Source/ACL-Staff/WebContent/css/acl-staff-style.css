@@ -1,0 +1,552 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    direction: ltr
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.title {
+    text-align: center;
+    font-size: 16pt
+}
+
+.lastModiTime {
+    text-align: right;
+    font-size: 10pt;
+    margin-right: 10px
+}
+
+.addsContent {
+    margin-left: 10px;
+    font-size: 12pt
+}
+
+.addsFooter {
+    width: 800px;
+    height: 50px;
+    font-size: 9pt;
+    font-style: normal;
+    text-decoration: none;
+    clear: left;
+    padding: 0;
+    margin: 0px auto;
+    text-align: left;
+    background: #0f4a3c;
+    color: #ffffff;
+    margin-top: 50px
+}
+
+.container {
+    width: 100%;
+    font-size: 10pt;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto -62px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%
+}
+
+.container .header {
+    width: 980px;
+    color: #fff;
+    font-size: 10pt;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 30px;
+    text-decoration: none;
+    margin: 0px auto;
+    padding: 0;
+    padding-top: 10px
+}
+
+.container .header #brand {
+    width: 980px;
+    margin: 0px auto;
+    padding: 0px 0px 10px 0px;
+    float: left
+}
+
+.container .header #brand img {
+    border: none
+}
+
+.container .header #navbar {
+    width: 700px;
+    height: 30px;
+    float: left;
+    background: #0f4a3c
+}
+
+.container .header #userinfo {
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    float: left;
+    background: #0f4a3c
+}
+
+.container .header #logoff {
+    text-align: center;
+    width: 78px;
+    height: 30px;
+    float: left;
+    background: #0f4a3c;
+    border-left: 2px solid #fff
+}
+
+.container .header #logoff a {
+    color: #fff
+}
+
+.container .header #logTime {
+    width: 980px;
+    height: 30px;
+    color: #000000;
+    font-size: 9pt;
+    text-align: right;
+    float: left
+}
+
+.container .header #logTime span {
+    color: red;
+    font-size: 11pt
+}
+
+.container .mainContent {
+    width: 980px;
+    font-style: normal;
+    text-decoration: none;
+    text-align: left;
+    clear: left;
+    margin: 0px auto;
+    padding: 0px 0px 0px 0px;
+    padding-bottom: 95px
+}
+
+.container .mainContent img {
+    vertical-align: text-bottom
+}
+
+.container .mainContent .imgContent {
+    text-align: center
+}
+
+.container .mainContent .content {
+    width: 980px;
+    height: auto;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 30px;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.container .mainContent .content .fnctTitle {
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 0px 0px 0px 10px;
+    border: 1px solid #CECECE;
+    text-align: left
+}
+
+.footer {
+    text-align: center
+}
+
+.footer .footerContent {
+    width: 980px;
+    height: 50px;
+    font-size: 9pt;
+    font-style: normal;
+    text-decoration: none;
+    clear: left;
+    padding: 0;
+    margin: 0px auto;
+    text-align: left;
+    background: #0f4a3c;
+    color: #ffffff;
+    margin-top: -50px
+}
+
+.copyright {
+    line-height: 38px;
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-left: 6px
+}
+
+.tslogo {
+    float: right
+}
+
+.fxdTable {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    word-break: normal;
+    color: #000000;
+    text-align: left;
+    line-height: 25px;
+    margin: 10px 0px 0px 0px
+}
+
+.fxdTable .secondaryTitleRow {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #666666;
+    word-break: normal
+}
+
+.fxdTable a {
+    color: blue;
+    text-decoration: underline
+}
+
+.fxdTable tr td .helperText {
+    font-size: 9pt;
+    color: #666666
+}
+
+.titleRow {
+    background-color: #333333;
+    word-break: normal;
+    color: #FFFFFF;
+    text-align: center
+}
+
+.dataRowOdd {
+    background-color: #FFFFFF;
+    word-break: normal
+}
+
+.dataRowEven {
+    background-color: #E9E9E9;
+    word-break: normal
+}
+
+.vTable {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    word-break: normal;
+    color: #000000;
+    text-align: left;
+    line-height: 25px;
+    border: 1px solid #CECECE;
+    margin: 10px 0px 0px 0px
+}
+
+.vTable th {
+    width: 150px;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 10px
+}
+
+.vTable td {
+    padding-left: 10px
+}
+
+.staffFnctTable {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    word-break: normal;
+    color: #000000;
+    text-align: left;
+    line-height: 25px;
+    margin: 10px 0px 0px 0px;
+    border: 1px solid #000000
+}
+
+.staffFnctTitleRow {
+    background-color: #CECECE;
+    word-break: normal;
+    color: #000000;
+    font-weight: bold
+}
+
+.staffFnctRowOdd {
+    background-color: #FFFFFF;
+    word-break: normal
+}
+
+.staffFnctRowEven {
+    background-color: #E9E9E9;
+    word-break: normal
+}
+
+.pageContent {
+    width: 780px;
+    font-size: 10pt;
+    font-style: normal;
+    text-decoration: none;
+    text-align: right;
+    line-height: 20px;
+    float: left;
+    margin: 10px 0px 0px 20px
+}
+
+.btnContent {
+    width: 780px;
+    float: left;
+    margin: 20px
+}
+
+.btnSpace {
+    margin: 20px 0px
+}
+
+.btnStyle {
+    border: none;
+    cursor: hand;
+    color: #FFFFFF;
+    background-color: #0f4a3c;
+    border-radius: 10px;
+    padding: 3px 10px 5px 10px
+}
+
+input[type=button][disabled=disabled] {
+    background-color: #666
+}
+
+input[type=button]:disabled {
+    background-color: #666
+}
+
+.choiceStyle {
+    border: none;
+    cursor: hand;
+    color: #FFFFFF;
+    background-color: #0f4a3c;
+    border-radius: 10px;
+    height: 20px
+}
+
+div.push {
+    height: 50px;
+    clear: both
+}
+
+.marginTOP20 {
+    margin-top: 20px
+}
+
+.icon-detail:hover {
+    cursor: pointer
+}
+
+.noResult {
+    margin-top: 10px;
+    border: 1px solid #ffdf7c;
+    background-color: #fff4d4;
+    padding: 20px;
+    border-radius: 10px;
+    color: #666
+}
+
+.error {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffacac;
+    background-color: #ffdedf;
+    padding: 20px;
+    border-radius: 10px;
+    color: #666
+}
+
+.menuList {
+    margin: 0px 10px;
+    display: inline;
+    position: relative
+}
+
+.menuList a {
+    color: #ffffff
+}
+
+.menuList .menuDetail {
+    display: none;
+    position: absolute;
+    left: -10px;
+    padding-top: 10px;
+    z-index: 10;
+    background: #ffffff
+}
+
+.menuList .menuDetail table {
+    word-break: keep-all;
+    border: 1px solid #0f4a3c;
+}
+
+.menuList .menuDetail table thead tr td {
+    text-align: center;
+    background:#0f4a3c;
+}
+
+.menuList .menuDetail table tbody tr td {
+    padding: 0px 2px;
+    line-height: 18pt;
+    font-weight: normal
+}
+
+.menuList .menuDetail table tbody a {
+    color: #000000
+}
+
+#accordion {
+    margin-top: 20px;
+    font-size: 10pt
+}
+
+#accordion input[type=text], #accordion select {
+    width: 150px
+}
+
+.ui-accordion-header {
+    background: #666;
+    color: #fff
+}
+
+.ui-datepicker-trigger {
+    margin-left: 5px
+}
+
+.ui-datepicker-trigger:HOVER {
+    cursor: pointer
+}
+
+.ui-dialog-content table {
+    font-size: 10pt;
+    line-height: 19pt
+}
+
+.ui-dialog-content table tr .dataRowEven {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.ui-button-text-only {
+    border-radius: 10px;
+    border: none
+}
+
+.ui-button-text-only:FOCUS {
+    outline: none
+}
+
+.ui-button-text-only .ui-button-text {
+    background-color:#0f4a3c;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: normal;
+    border: none
+}
+
+.ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick {
+    background-image: url("../js/jquery-ui-1.11.4.custom/images/ui-icons_bb1017_256x240.png");
+    background-position: -96px -128px
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.abgne_tab {
+    clear: left;
+    width: 978px;
+    margin: 10px 0
+}
+
+.abgne_tab .tabs {
+    width: 100%;
+    height: 32px;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999
+}
+
+.abgne_tab .tabs li {
+    float: left;
+    height: 31px;
+    line-height: 31px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -1px;
+    border: 1px solid #999;
+    border-left: none;
+    background: #e1e1e1
+}
+
+.abgne_tab .tabs li a {
+    display: block;
+    padding: 0 20px;
+    color: #000;
+    border: 1px solid #fff;
+    text-decoration: none
+}
+
+.abgne_tab .tabs li a:hover {
+    background: #ccc
+}
+
+.abgne_tab .tabs li.active {
+    color: #fff;
+    background: #0f4a3c;
+    border-bottom: 1px solid #0f4a3c;
+}
+
+.abgne_tab .tabs li.active a {
+    color: #fff
+}
+
+.abgne_tab .tabs li.active a:hover {
+    background: #0f4a3c;
+}
+
+.abgne_tab .tab_container {
+    clear: left;
+    width: 100%;
+    border: 1px solid #999;
+    border-top: none;
+    background: #fff
+}
+
+.abgne_tab .tab_container .tab_content {
+    padding: 20px
+}
+
+.abgne_tab .tab_container .tab_content h2 {
+    margin: 0 0 20px
+}
+
+/* 2018/5/30 yjc modify Dialog, DatePicker color */
+.ui-widget-header {
+    border: 1px solid #0f4a3c;
+    background: #0f4a3c;
+}
+
+/* 2018/06/07 顯示資料排版置中 */
+.text-center {
+	text-align: center;
+}

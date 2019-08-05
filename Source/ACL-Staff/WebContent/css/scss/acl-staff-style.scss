@@ -1,0 +1,408 @@
+@charset "UTF-8";
+$acl-red:#d70c18;
+$normal-text-size:10pt;
+$page-width:980px;
+
+/*=============================== main ===============================*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $normal-text-size;
+    direction: ltr;
+}
+
+
+/*hyperlink ==============================================================*/
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+
+/*advertisement ================================================================*/
+
+.title {
+    text-align: center;
+    font-size: 16pt;
+}
+
+.lastModiTime {
+    text-align: right;
+    font-size: 10pt;
+    margin-right: 10px;
+}
+
+.addsContent {
+    margin-left: 10px;
+    font-size: 12pt;
+}
+
+.addsFooter {
+    width: 800px;
+    height: 50px;
+    font-size: 9pt;
+    font-style: normal;
+    text-decoration: none;
+    clear: left;
+    padding: 0;
+    margin: 0px auto;
+    text-align: left;
+    background: #d70c18;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+
+/* Container ================================================================== */
+
+.container {
+    width: 100%;
+    font-size: 10pt;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto -62px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    .header {
+        width: $page-width;
+        color: #fff;
+        font-size: 10pt;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 30px;
+        text-decoration: none;
+        margin: 0px auto;
+        padding: 0;
+        padding-top: 10px;
+        #brand {
+            width: $page-width;
+            margin: 0px auto;
+            padding: 0px 0px 10px 0px;
+            float: left;
+            img {
+                border: none;
+            }
+        }
+        #navbar {
+            width: 700px;
+            height: 30px;
+            float: left;
+            background: $acl-red;
+        }
+        #userinfo {
+            text-align: center;
+            width: 200px;
+            height: 30px;
+            float: left;
+            background: $acl-red;
+        }
+        #logoff {
+            text-align: center;
+            width: 78px;
+            height: 30px;
+            float: left;
+            background: $acl-red;
+            border-left: 2px solid #fff;
+            a {
+                color: #fff;
+            }
+        }
+        #logTime {
+            width: $page-width;
+            height: 30px;
+            color: #000000;
+            font-size: 9pt;
+            text-align: right;
+            float: left;
+            span {
+                color: red;
+                font-size: 11pt;
+            }
+        }
+    }
+    .mainContent {
+        width: $page-width;
+        font-style: normal;
+        text-decoration: none;
+        text-align: left;
+        clear: left;
+        margin: 0px auto;
+        padding: 0px 0px 0px 0px;
+        padding-bottom: 95px;
+        img {
+            vertical-align: text-bottom;
+        }
+        .imgContent {
+            text-align: center;
+        }
+        .content {
+            width: $page-width;
+            height: auto;
+            font-style: normal;
+            text-decoration: none;
+            line-height: 30px;
+            overflow: auto;
+            overflow-x: auto;
+            overflow-y: hidden;
+            .fnctTitle {
+                font-size: 12pt;
+                font-weight: bold;
+                padding: 0px 0px 0px 10px;
+                border: 1px solid #CECECE;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+/* Footer ===========================================================*/
+
+.footer {
+    text-align: center;
+    .footerContent {
+        width: $page-width;
+        height: 50px;
+        font-size: 9pt;
+        font-style: normal;
+        text-decoration: none;
+        clear: left;
+        padding: 0;
+        margin: 0px auto;
+        text-align: left;
+        background: $acl-red;
+        color: #ffffff;
+        margin-top: -50px;
+    }
+}
+
+.copyright {
+    line-height: 38px;
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+
+.tslogo {
+    float: right;
+}
+
+
+/*fxdTable ===========================================================*/
+
+.fxdTable {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    word-break: normal;
+    color: #000000;
+    text-align: left;
+    line-height: 25px;
+    margin: 10px 0px 0px 0px;
+    .secondaryTitleRow {
+        color: #FFFFFF;
+        font-weight: bold;
+        background-color: #666666;
+        word-break: normal;
+    }
+    a {
+        color: blue;
+        text-decoration: underline
+    }
+    tr td .helperText {
+        font-size: 9pt;
+        color: #666666;
+    }
+}
+
+.titleRow {
+    background-color: #333333;
+    word-break: normal;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.dataRowOdd {
+    background-color: #FFFFFF;
+    word-break: normal;
+}
+
+.dataRowEven {
+    background-color: #E9E9E9;
+    word-break: normal;
+}
+
+
+/*vTable =============================================================*/
+
+.vTable {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    word-break: normal;
+    color: #000000;
+    text-align: left;
+    line-height: 25px;
+    border: 1px solid #CECECE;
+    margin: 10px 0px 0px 0px;
+    th {
+        width: 150px;
+        font-weight: normal;
+        text-align: right;
+        padding-right: 10px;
+    }
+    td {
+        padding-left: 10px;
+    }
+}
+
+
+/*FnctTable ==========================================================*/
+
+.staffFnctTable {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    word-break: normal;
+    color: #000000;
+    text-align: left;
+    line-height: 25px;
+    margin: 10px 0px 0px 0px;
+    border: 1px solid #000000;
+}
+
+.staffFnctTitleRow {
+    background-color: #CECECE;
+    word-break: normal;
+    color: #000000;
+    font-weight: bold;
+}
+
+.staffFnctRowOdd {
+    background-color: #FFFFFF;
+    word-break: normal;
+}
+
+.staffFnctRowEven {
+    background-color: #E9E9E9;
+    word-break: normal;
+}
+
+
+/* pageContent ================================================================== */
+
+.pageContent {
+    width: 780px;
+    font-size: 10pt;
+    font-style: normal;
+    text-decoration: none;
+    text-align: right;
+    line-height: 20px;
+    float: left;
+    margin: 10px 0px 0px 20px;
+}
+
+
+/* ============================== btnContent ==================================== */
+
+@mixin btnstyle($bg_color) {
+    border: none;
+    cursor: hand;
+    color: #FFFFFF;
+    background-color: $bg_color;
+    border-radius: 10px;
+}
+
+.btnContent {
+    width: 780px;
+    float: left;
+    margin: 20px;
+}
+
+.btnSpace {
+    margin: 20px 0px;
+}
+
+.btnStyle {
+    @include btnstyle($acl-red);
+    padding: 3px 10px 5px 10px;
+}
+
+/*for ie8*/
+input[type=button][disabled=disabled] {
+    background-color: #666
+}
+
+/*for other browser*/
+input[type=button]:disabled {
+    background-color: #666
+}
+
+.choiceStyle {
+    @include btnstyle($acl-red);
+    height: 20px;
+}
+
+
+/* else ================================================================== */
+
+div.push {
+    height: 50px;
+    clear: both;
+}
+
+.marginTOP20 {
+    margin-top: 20px;
+}
+
+.icon-detail:hover {
+    cursor: pointer;
+}
+
+
+/* 查詢結果 ============================================================= */
+
+.noResult {
+    margin-top: 10px;
+    border: 1px solid #ffdf7c;
+    background-color: #fff4d4;
+    padding: 20px;
+    border-radius: 10px;
+    color: #666;
+}
+
+.error {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffacac;
+    background-color: #ffdedf;
+    padding: 20px;
+    border-radius: 10px;
+    color: #666;
+}
+
+
+/* =============================== import =================================== */
+
+@import 'menu';
+@import 'jquery_ui';
+@import 'tabs';
+// @import 'print';

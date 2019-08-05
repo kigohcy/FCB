@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2016 3:35:41 PM by Hibernate Tools 3.5.0.Final -->
+
+<hibernate-mapping package="com.hitrust.bank.model">
+    <class name="TxncsSvip" table="TXNCS_SVIP">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractTxncsSvip$Id">
+            <key-property name="name" 			column="NAME" 			type="java.lang.String" 	length="82" />
+            <key-property name="idType" 		column="ID_TYPE" 		type="java.lang.String" 	length="4" />
+            <key-property name="idNo" 			column="ID_NO" 			type="java.lang.String" 	length="40" />
+            <key-property name="idNo1" 			column="ID_NO1" 		type="java.lang.String" 	length="40" />
+            <key-property name="custAcctNo" 	column="CUST_ACCT_NO" 	type="java.lang.String" 	length="40" />
+            <key-property name="actNo" 			column="ACT_NO" 		type="java.lang.String" 	length="40" />
+            <key-property name="flag" 			column="FLAG" 			type="java.lang.String" 	length="2" />
+            <key-property name="lstMtnDt" 		column="LST_MTN_DT" 	type="java.lang.String" 	length="8" />
+        </composite-id>
+    </class>
+</hibernate-mapping>

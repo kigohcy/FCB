@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* menu ==============================================================*/
+$acl-red:#d70c18;
+.menuList {
+    margin:0px 10px;
+    display: inline;
+    position: relative;
+    a {
+        color: #ffffff;
+    }
+    .menuDetail {
+        display: none;
+        position: absolute;
+        left: -10px;
+        padding-top: 10px;
+        z-index: 10;
+        background: #ffffff;
+        table {
+            word-break: keep-all;
+            border: 1px solid $acl-red;
+            thead {
+                tr td {
+                    text-align: center;
+                    background: $acl-red;
+                }
+            }
+            tbody {
+                tr td {
+                    padding: 0px 2px;
+                    line-height: 18pt;
+                    font-weight: normal;
+                }
+                a {
+                    color: #000000;
+                }
+            }
+        }
+    }
+}

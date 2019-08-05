@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.CustAcntLink" table="CUST_ACNT_LINK">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractCustAcntLink$Id">
+            <key-property name="custId" type="java.lang.String">
+                <column name="CUST_ID" />
+            </key-property>
+            <key-property name="ecId" type="java.lang.String">
+                <column name="EC_ID" />
+            </key-property>
+            <key-property name="ecUser" type="java.lang.String">
+                <column name="EC_USER" />
+            </key-property>
+            <key-property name="realAcnt" type="java.lang.String">
+                <column name="REAL_ACNT" />
+            </key-property>
+        </composite-id>
+        <property name="gradType" type="java.lang.String">
+            <column name="GRAD_TYPE" />
+        </property>
+        <property name="grad" type="java.lang.String">
+            <column name="GRAD" />
+        </property>
+        <property name="stts" type="java.lang.String">
+            <column name="STTS" />
+        </property>
+        <property name="sttsDttm" type="java.util.Date">
+            <column name="STTS_DTTM" />
+        </property>
+        <property name="trnsLimt" type="java.lang.Long">
+            <column name="TRNS_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="dayLimt" type="java.lang.Long">
+            <column name="DAY_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="mnthLimt" type="java.lang.Long">
+            <column name="MNTH_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="cretDttm" type="java.util.Date">
+            <column name="CRET_DTTM" />
+        </property>
+        <property name="mdfyUser" type="java.lang.String">
+            <column name="MDFY_USER" />
+        </property>
+        <property name="mdfyDttm" type="java.util.Date">
+            <column name="MDFY_DTTM" />
+        </property>
+        <property name="acntIndt" type="java.lang.String">
+            <column name="ACNT_INDT" />
+        </property>
+    </class>
+</hibernate-mapping>

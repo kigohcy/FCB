@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.CustAcnt" table="CUST_ACNT">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractCustAcnt$Id">
+            <key-property name="custId" type="java.lang.String">
+                <column name="CUST_ID" />
+            </key-property>
+            <key-property name="realAcnt" type="java.lang.String">
+                <column name="REAL_ACNT" />
+            </key-property>
+        </composite-id>
+        <property name="trnsLimt" type="java.lang.Long">
+            <column name="TRNS_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="dayLimt" type="java.lang.Long">
+            <column name="DAY_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="mnthLimt" type="java.lang.Long">
+            <column name="MNTH_LIMT" precision="15" scale="0" />
+        </property>
+        <property name="cretDttm" type="java.util.Date">
+            <column name="CRET_DTTM" />
+        </property>
+        <property name="mdfyUser" type="java.lang.String">
+            <column name="MDFY_USER" />
+        </property>
+        <property name="mdfyDttm" type="java.util.Date">
+            <column name="MDFY_DTTM" />
+        </property>
+    </class>
+</hibernate-mapping>

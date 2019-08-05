@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* override jquery-ui ================================================*/
+
+
+/* accordion */
+
+#accordion {
+    margin-top: 20px;
+    font-size: 10pt;
+    input[type=text],
+    select {
+        width: 150px;
+    }
+}
+
+.ui-accordion-header {
+    background: #666;
+    color: #fff;
+}
+
+
+/* popup calendar */
+
+.ui-datepicker-trigger {
+    margin-left: 5px;
+}
+
+.ui-datepicker-trigger:HOVER {
+    cursor: pointer;
+}
+
+
+/* dialog */
+
+.ui-dialog-content table {
+    font-size: 10pt;
+    line-height: 19pt;
+}
+
+.ui-dialog-content table tr .dataRowEven {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ui-button-text-only {
+    border-radius: 10px;
+    border: none;
+}
+
+.ui-button-text-only:FOCUS {
+    outline: none;
+}
+
+.ui-button-text-only .ui-button-text {
+    background-color: #bb1017;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: normal;
+    border: none;
+}
+
+.ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick {
+    background-image: url("../js/jquery-ui-1.11.4.custom/images/ui-icons_bb1017_256x240.png");
+    background-position: -96px -128px;
+}

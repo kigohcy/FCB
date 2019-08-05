@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/6/6 02:34:35 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.DayCustCont" table="DAY_CUST_CONT">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractDayCustCont$Id">
+            <key-property name="setlDate" type="java.lang.String">
+                <column name="SETL_DATE" />
+            </key-property>
+            <key-property name="stts" type="java.lang.String">
+                <column name="STTS" />
+            </key-property>
+        </composite-id>
+        <property name="totlCont" type="java.lang.Integer">
+            <column name="TOTL_CONT" />
+        </property>
+        <property name="mdfyDttm" type="java.util.Date">
+            <column name="MDFY_DTTM" />
+        </property>
+    </class>
+</hibernate-mapping>

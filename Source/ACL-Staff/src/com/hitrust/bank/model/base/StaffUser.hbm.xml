@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/2/24 02:39:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.StaffUser" table="STAFF_USER">
+        <id name="loginId" type="java.lang.String">
+            <column name="LOGIN_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="loginMema" type="java.lang.String">
+            <column name="LOGIN_MEMA" not-null="true" />
+        </property>
+        <property name="loginMema1" type="java.lang.String">
+            <column name="LOGIN_MEMA1" />
+        </property>
+        <property name="loginMema2" type="java.lang.String">
+            <column name="LOGIN_MEMA2" />
+        </property>
+        <property name="loginMema3" type="java.lang.String">
+            <column name="LOGIN_MEMA3" />
+        </property>
+        <property name="deptId" type="java.lang.String">
+            <column name="DEPT_ID" not-null="true" />
+        </property>
+        <property name="userId" type="java.lang.String">
+            <column name="USER_ID" not-null="true" />
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME" not-null="true" />
+        </property>
+        <property name="roleId" type="java.lang.String">
+            <column name="ROLE_ID" not-null="true" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" not-null="true" />
+        </property>
+        <property name="states" type="java.lang.String">
+            <column name="STATES" not-null="true" />
+        </property>
+        <property name="createDate" type="java.lang.String">
+            <column name="CREATE_DATE" not-null="true"/>
+        </property>
+        <property name="updateDate" type="java.lang.String">
+            <column name="UPDATE_DATE" />
+        </property>
+        <property name="finalLoginDate" type="java.lang.String">
+            <column name="FINAL_LOGIN_DATE" />
+        </property>
+        <property name="changeMemaDate" type="java.lang.String">
+            <column name="CHANGE_MEMA_DATE" />
+        </property>
+        <property name="errorMemaCount" type="java.lang.Integer">
+            <column name="ERROR_MEMA_COUNT" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Generated Mar 21, 2016 11:18:40 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.hitrust.bank.model" >
+    <class name="EcCert" table="EC_CERT">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractEcCert$Id">
+            <key-property name="ecId" 		column="EC_ID" 		type="java.lang.String" 	length="4" />
+            <key-property name="certCn" 	column="CERT_CN" 	type="java.lang.String" 	length="25" />
+        </composite-id>
+        
+        <property name="certSn" 		column="CERT_SN" 		type="java.lang.String" 	length="8"/>
+        <property name="certId" 		column="CERT_ID" 		type="java.lang.Integer" />
+        <property name="strtDttm" 		column="STRT_DTTM" 		type="java.lang.String" 	length="14"/>
+        <property name="endDttm" 		column="END_DTTM" 		type="java.lang.String" 	length="14"/>
+        <property name="raAcnt" 		column="RA_ACNT" 		type="java.lang.String" 	length="25"/>
+        <property name="certFeeData" 	column="CERT_FEE_DATA" 	type="org.springframework.orm.hibernate3.support.BlobByteArrayType" />
+
+    </class>
+</hibernate-mapping>

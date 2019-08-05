@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/6/6 02:34:35 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.CustLogin" table="CUST_LOGIN">
+        <id name="userId" type="java.lang.String">
+            <column name="USER_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="loginStts" type="java.lang.String">
+            <column name="LOGIN_STTS" />
+        </property>
+        <property name="loginTime" type="java.lang.String">
+            <column name="LOGIN_TIME" />
+        </property>
+        <property name="createTime" type="java.lang.String">
+            <column name="CREATE_TIME" />
+        </property>
+        <property name="sessionId" type="java.lang.String">
+            <column name="SESSION_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

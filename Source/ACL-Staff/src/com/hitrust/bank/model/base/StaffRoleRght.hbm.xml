@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Generated Nov 16, 2015 1:52:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.hitrust.bank.model">
+    <class name="StaffRoleRght" table="STAFF_ROLE_RGHT">
+    	<composite-id name="id" class="com.hitrust.bank.model.base.AbstractStaffRoleRght$Id">
+    		<key-property name="roleId" column="ROLE_ID" type="java.lang.String" length="10" />
+    		<key-property name="fnctId" column="FNCT_ID" type="java.lang.String" length="10" />
+    	</composite-id>
+        
+    </class>
+</hibernate-mapping>

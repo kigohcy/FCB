@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/6/6 02:34:35 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hitrust.bank.model.CustSysMenu" table="CUST_SYS_MENU">
+        <composite-id name="id" class="com.hitrust.bank.model.base.AbstractCustSysMenu$Id">
+            <key-property name="lngn" type="java.lang.String">
+                <column name="LNGN" />
+            </key-property>
+            <key-property name="menuId" type="java.lang.String">
+                <column name="MENU_ID" />
+            </key-property>
+        </composite-id>
+        <property name="menuName" type="java.lang.String">
+            <column name="MENU_NAME" not-null="true" />
+        </property>
+        <property name="serl" type="java.lang.Integer">
+            <column name="SERL" />
+        </property>
+    </class>
+</hibernate-mapping>
