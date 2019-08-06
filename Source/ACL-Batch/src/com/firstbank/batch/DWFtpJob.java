@@ -45,7 +45,8 @@ public class DWFtpJob  extends AbstractAclBatch {
 		int rtn = 0;
 		LOG.info("\n");
 		LOG.info("======================================================");
-		LOG.info(" 客戶綁定/解除日報表批次  開始....");
+		//客戶綁定/解除日報表批次開始
+		LOG.info(" DW產檔  開始....");
 
 		try {
 
@@ -177,7 +178,8 @@ public class DWFtpJob  extends AbstractAclBatch {
 		} catch (Exception e) {
 			LOG.error("DWFtpJob Exception:", e);
 		} finally {
-			LOG.info("客戶綁定/解除日報表批次  結束....");
+			//客戶綁定/解除日報表批次  結束
+			LOG.info("DW產檔  結束....");
 		}
 	}
 
