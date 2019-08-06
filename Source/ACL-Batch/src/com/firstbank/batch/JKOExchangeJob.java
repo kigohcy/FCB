@@ -241,7 +241,10 @@ public class JKOExchangeJob extends AbstractAclBatch {
 			if ("P".equals(trnsKind)) {
 				if(StringUtils.equals(trnsTypeFromDb, "A")){
 					bf.append("1");
-				}else{
+				}else if(StringUtils.equals(trnsTypeFromDb, "E")) {
+					bf.append("3"); //繳費稅改為3
+				}
+				else{
 					bf.append("2");
 				}
 			} else{
