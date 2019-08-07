@@ -113,9 +113,11 @@
                 		}
                 	},
                 	entrId:{
-                		NUM_CHECKER:{
-                			isNum:2
-                		}
+                		LENGTH_CHECKER:{
+                			min:8,
+                			max:9
+                		},
+                		ALPHA_DASH_CHECKER: true
                 	},
                 	cntc:{
                 		LENGTH_CHECKER:{
@@ -180,7 +182,7 @@
                 		NUM_CHECKER:"<fmt:message key="F0201.field.REAL_ACNT" /><fmt:message key="message.alert.onlyNum" />"
                 	},
                 	entrId:{
-                		NUM_CHECKER:"<fmt:message key="F0201.field.ENTR_ID" /><fmt:message key="message.alert.onlyNum" />"
+                		NUM_CHECKER:"<fmt:message key="F0201.field.ENTR_ID" /><fmt:message key="message.alert.onlyEN&NUM" />"
                 	},
                 	cntc:{
                 		LENGTH_CHECKER:"<fmt:message key="F0201.field.CNTC" /><fmt:message key="message.alert.overLength" />"

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application>
+	<page url="/index" />
+
+	<page url="/login">
+		<field name="userId"   length="20" isNull="N" />
+		<field name="userPswd" length="20" isNull="N" mask="Y" />
+	</page>
+	
+	<!-- 電商平台管理link-->
+	<page url ="/0201/EcDataMgmt" />
+	
+	<!-- 電商平台管理確認、上下頁-->
+	<page url ="/0201/reEcDataMgmt" />
+	
+	<!-- 電商平台管理新增編輯 -->
+	<page url ="/0201/insertEcDataInit"/>
+		
+	<!-- 電商平台修改編輯 -->
+	<page url ="/0201/updateEcDataInit">
+		<field name="ecId"          type="N"  length="4"   isNull="N"	/>
+	</page>
+	
+	<!-- 電商平台管理新增  --> 
+	<page url ="/0201/sendEcDataInsert">
+		<field name="ecId"          type="N"  length="4"   isNull="N"	/>
+		<field name="ecNameCh"      		  length="20"  isNull="N" 	/>
+		<field name="ecNameEn"     			  length="20"  				/>
+		<field name="feeType"       type="E"  length="1"   isNull="N" 	/>
+		<field name="feeRate"       type="D"  length="9"   isNull="N" 	/>
+		<field name="stts"      	type="D"  length="2"   isNull="N" 	/>
+		<field name="realAcnt"      		  length="11"  isNull="N" 	/>
+		<field name="entrNo"     	type="N"  length="7"   isNull="N" 	/>
+		<field name="entrId"      	type="N"  length="9"				/>
+		<field name="cntc"       	type="C"  length="20"				/>
+		<field name="tel"     	   			  length="20"				/>
+		<field name="mail"          		  length="128"				/>
+		<field name="note"        			  length="64"				/>
+		<field name="cretUser"      		  length="10"	isNull="N"	/>
+		<field name="cretDttm"        		  length="15"	isNull="N"	/>
+		<field name="oprtType"        		  length="1"	isNull="N"	/>
+		<field name="dataStts"        		  length="1"	isNull="N"	/>
+	</page>
+	
+	<!-- 電商平台管理修改 -->
+ 	<page url ="/0201/sendEcDataUpdate">
+		<field name="ecNameCh"      		  length="20"  isNull="N" 	/>
+		<field name="ecNameEn"     			  length="20"   			/>
+		<field name="feeType"       type="E"  length="1"   isNull="N" 	/>
+		<field name="feeRate"       type="D"  length="9"   isNull="N" 	/>
+		<field name="stts"      	type="D"  length="2"   isNull="N" 	/>
+		<field name="realAcnt"      		  length="11"  isNull="N" 	/>
+		<field name="entrNo"     	type="N"  length="7"   isNull="N" 	/>
+		<field name="entrId"      	type="N"  length="9"				/>
+		<field name="cntc"       	type="C"  length="20"				/>
+		<field name="tel"     	   			  length="20"				/>
+		<field name="mail"          		  length="128"				/>
+		<field name="note"        			  length="64"				/>
+	</page> 
+	
+	<!-- 電商平台刪除 -->
+	<page url ="/0201/deleteEcData">
+		<field name="ecId"          type="N"  length="4"   isNull="N"	/>
+	</page>
+	
+	<!-- 服務狀態管理link -->
+	<page url ="/0202/queryInit"/>
+	
+	<!-- 服務狀態管理查詢-->
+	<page url ="/0202/query">
+		<field name="custId"      		  	 length="11"  	isNull="N" 	/>
+	 </page>
+	
+	<!-- 服務狀態管理確認、上下頁-->
+	<page url ="/0202/requery" />
+	
+	<!-- 服務狀態管理平台、帳號狀態修改-->
+	<page url ="/0202/updateAcntStts">
+		<field name="ecKey"     isNull="N" 	/>
+		<field name="acntKey"   isNull="N" 	/>
+	</page>
+	
+	<!-- 服務狀態管理會員狀態啟用-->
+	<page url ="/0202/updateOpenCustStts" />
+	
+	<!-- 服務狀態管理會員狀態暫停-->
+	<page url ="/0202/updateStopCustStts" />
+	
+	<!-- 交易限額管理link-->
+	<page url ="/0204/queryInit" />
+	
+	<!-- 交易限額管理查詢-->
+	<page url ="/0204/query">
+		<field name="custId"      		  	 length="11"  	isNull="N" 	/>
+	</page>
+	
+	<!-- 交易限額管理查詢確認、上下頁-->
+	<page url ="/0204/requery" />
+	
+	<!-- 交易限額管理修改編輯 -->
+	<page url ="/0204/updateInit" />
+	
+	<!-- 交易限額管理修改 -->
+	<page url ="/0204/updateTrnsLimtAcnt">
+		<field name="custAcntTrnsLmt"     type="D" 	 length="15"  	 	/>
+		<field name="custAcntDayLmt"      type="D"	 length="15"  	 	/>
+		<field name="custAcntMnthLmt"     type="D" 	 length="15"  	 	/>
+		<field name="custAcntLinkTrnsLmt" type="D"   length="15"  	 	/>
+		<field name="custAcntLinkDayLmt"  type="D"   length="15"  		/>
+		<field name="custAcntLinkMnthLmt" type="D"   length="15"  	 	/>
+	</page>
+	
+	<!--電商平台查詢 link -->
+	<page url ="/0205/queryEcData"/>
+	
+	<!-- 服務狀態管理查詢 link-->
+	<page url ="/0206/queryInit" />
+	
+	<!-- 服務狀態管理查詢 -->
+	<page url ="/0206/query" >
+		<field name="custId"      		  	 length="11"  	isNull="N" 	/>
+	</page>
+	
+	<!-- 交易限額查詢 link-->
+	<page url ="/0207/queryInit" />
+	
+	<!-- 交易限額查詢 -->
+	<page url ="/0207/query" >
+		<field name="custId"      		  	 length="11"  	isNull="N" 	/>
+	</page>
+	
+	<!-- 會員連結設定紀錄:link -->
+	<page url="/0208/queryInit" />
+	
+	<!-- 會員連結設定紀錄:查詢 -->
+	<page url="/0208/query">
+		<field name="strtDate"	length="10"					isNull="N"/>
+		<field name="endDate"	length="10"					isNull="N"/>
+		<field name="queryType"	length="2"		type="N"	isNull="N"/>
+		<field name="custId"	length="11"		type="A"/>
+		<field name="realAcnt"	length="16"		type="N"/>
+		<field name="ecId"		length="4"		type="N"/>
+		<field name="stts"		length="2"		type="N"/>
+		<field name="execSrc"	length="1"		type="E"/>
+	</page>
+	
+	<!-- 會員連結設定紀錄:上、下頁切換 -->
+	<page url="/0208/requery">
+		<field name="strtDate"	length="10"					isNull="N"/>
+		<field name="endDate"	length="10"					isNull="N"/>
+		<field name="queryType"	length="2"		type="N"	isNull="N"/>
+		<field name="custId"	length="11"		type="A"/>
+		<field name="realAcnt"	length="16"		type="N"/>
+		<field name="ecId"		length="4"		type="N"/>
+		<field name="stts"		length="2"		type="N"/>
+		<field name="execSrc"	length="1"		type="E"/>
+	</page>
+	
+	<!-- 未綁定解鎖 -->
+	<page url ="/0210/query">
+		<field name="custId"      		  	 length="11"  	isNull="N" 	/>
+	</page>
+	
+	<!-- 交易結果查詢:link -->
+	<page url="/0301/queryInit" />
+		
+	<!-- 交易結果查詢:查詢 -->
+	<page url="/0301/query">
+		<field name="strtDate"	length="10"					isNull="N"/>
+		<field name="endDate"	length="10"					isNull="N"/>
+		<field name="custId"	length="11"		type="A"/>
+		<field name="realAcnt"	length="16" 	type="A"/>
+		<field name="qEcId"		length="4"		type="N"/>
+		<field name="qTrnsType"	length="4" 		type="E"/>
+	</page>
+	
+	<!-- 交易結果查詢:上、下頁切換 -->
+	<page url="/0301/changePage">
+		<field name="strtDate"	length="10"					isNull="N"/>
+		<field name="endDate"	length="10"					isNull="N"/>
+		<field name="custId"	length="11"		type="A"/>
+		<field name="realAcnt"	length="16" 	type="A"/>
+		<field name="qEcId"		length="4"		type="N"/>
+		<field name="qTrnsType"	length="4" 		type="E"/>
+	</page>
+	
+	<!-- 最新公告訊息設定:初始化 -->
+	<page url="/0401/queryInit"/>
+	
+	<!-- 最新公告訊息設定:查詢 -->
+	<page url="/0401/query">
+		<field name="qBgnDate"	length="10"					isNull="N"/>
+		<field name="qEndDate"	length="10"					isNull="N"/>
+	</page>
+	
+	<!-- 最新公告訊息設定:新增初始化 -->
+	<page url="/0401/insertInit"/>
+	
+	<!-- 最新公告訊息設定:新增 -->
+	<page url="/0401/insert">
+		<field name="aBgnDate"	length="10"					isNull="N"/>
+		<field name="aEndDate"	length="10"					isNull="N"/>
+		<field name="type"									isNull="N"/>
+		<field name="title"									isNull="N"/>
+	</page>
+	
+	<!-- 最新公告訊息設定:刪除 -->
+	<page url="/0401/delete">
+		<field name="qSeq"		length="32"					isNull="N"/>
+	</page>
+	
+	<!-- 最新公告訊息設定:修改初始化 -->
+	<page url="/0401/modifyInit">
+		<field name="qSeq"		length="32"					isNull="N"/>
+	</page>
+	
+	<!-- 最新公告訊息設定:修改 -->
+	<page url="/0401/modify">
+		<field name="aBgnDate"	length="10"					isNull="N"/>
+		<field name="aEndDate"	length="10"					isNull="N"/>
+		<field name="type"									isNull="N"/>
+		<field name="title"									isNull="N"/>
+	</page>
+	<!-- 最新公告訊息設定:圖檔顯示 -->
+	<page url="/0401/newsImgSrv">
+		<field name="seq"	    length="32"					isNull="N"/>
+		<field name="fileName"	length="60"					isNull="N"/>
+	</page>
+	<page url="/0902/newsImgSrv">
+		<field name="seq"	    length="32"					isNull="N"/>
+		<field name="fileName"	length="60"					isNull="N"/>
+	</page>
+	<!-- 最新公告訊息設定:圖檔上傳 -->
+	<page url="/0401/uploadImg">
+		<field name="seq"	    length="32"					isNull="N"/>
+	</page>
+	
+	<!-- 約定帳號統計:初始化 -->
+	<page url="/0501/queryInit"/>
+	<!-- 約定帳號統計:查詢 -->
+	<page url="/0501/query">
+		<field name="strtDate"	length="10"	/>
+		<field name="endDate"	length="10"	/>
+		<field name="qEcId"		length="4"		type="N"/>
+		<field name="rptType"	length="7"		type="A"    isNull="N"/>
+	</page>
+	<!-- 約定帳號統計:明細查詢 -->
+	<page url="/0501/queryDetail">
+		<field name="dEcId"	    length="4"		type="N"/>
+		<field name="dStts"	    length="2"		type="N"/>
+	</page>
+	
+	<!-- 交易量統計:初始化 -->
+	<page url="/0504/queryInit"/>
+	
+	<!-- 交易量統計:查詢 -->
+	<page url="/0504/query">
+		<field name="strtDate"	length="10"					isNull="N"/>
+		<field name="endDate"	length="10"					isNull="N"/>
+		<field name="qEcId"		length="4"		type="N"/>
+	</page>
+	
+	<!-- 交易量統計:明細資料 -->
+	<page url="/0504/queryDetail"/>
+	
+	<!-- 交易量統計:個別明細資料 -->
+	<page url="/0504/queryDetail2"/>
+	
+	<!-- 會員服務統計:初始化 -->
+	<page url="/0505/queryInit"/>
+	<!-- 會員服務統計:查詢 -->
+	<page url="/0505/query">
+		<field name="strtDate"	length="10"	/>
+		<field name="endDate"	length="10"	/>
+		<field name="rptType"	length="7"		type="A"    isNull="N"/>
+	</page>
+	<!-- 會員服務統計:明細查詢 -->
+	<page url="/0505/queryDetail">
+		<field name="dStts"	    length="2"		type="N"/>
+	</page>
+	
+	<!-- 角色設定:link -->
+	<page url="/0901/roleQuery" />
+	
+	<!-- 角色設定:新增角色設定初始化 -->
+	<page url="/0901/roleAddInit" />
+	
+	<!-- 角色設定:新增角色 -->
+	<page url="/0901/roleAdd">
+		<field name="roleId"	length="10"		type="A"	isNull="N" />
+		<field name="roleName"	length="40" 				isNull="N" />
+		<field name="fnctIds" 								isNull="N" />
+	</page>
+	
+	<!-- 角色設定:修改角色初始化 -->
+	<page url="/0901/roleUpdateInit">
+		<field name="roleId"	length="10"		type="A"	isNull="N" />
+	</page>
+	
+	<!-- 角色設定:修改角色 -->
+	<page url="/0901/roleUpdate">
+		<field name="roleId"	length="10"		type="A"	isNull="N" />
+		<field name="roleName"	length="40" 				isNull="N" />
+		<field name="fnctIds" 								isNull="N" />
+	</page>
+	
+	<!-- 角色設定:刪除角色 -->
+	<page url="/0901/roleDelete">
+		<field name="roleId"	length="10"		type="A"	isNull="N" />
+	</page>
+	
+	<!-- 角色設定:功能檢視 -->
+	<page url="/0901/functionView">
+		<field name="roleId"	length="10"		type="A"	isNull="N" />
+	</page>
+	
+	<!-- 操作記錄查詢 link-->
+	<page url ="/0902/queryInit" />
+	
+	<!-- 操作記錄查詢-->
+	<page url="/0902/query">
+        <field name="startDate"          isNull="N" />
+        <field name="endDate"            isNull="N" />
+        <field name="quserId"            length="10"/>
+        <field name="qfnctId"            length="6" />
+		<field name="input_page"         length="10" 	isNull="N" />
+        <field name="page.pageNo"        length="10" 	isNull="N" />
+	</page>
+	
+	<!-- 操作記錄查詢確認、上下頁-->
+	<page url="/0902/requery" />
+	
+	<!-- 會員操作記錄查詢 link-->
+	<page url ="/0903/queryInit" />
+	
+	<!-- 會員操作記錄查詢-->
+	<page url="/0903/query">
+        <field name="startDate"          isNull="N" />
+        <field name="endDate"            isNull="N" />
+        <field name="qUserId"            length="11"/>
+        <field name="qFnctId"            length="6" />
+		<field name="input_page"         length="10" 	isNull="N" />
+        <field name="page.pageNo"        length="10" 	isNull="N" />
+	</page>
+	
+	<!-- 會員操作記錄查詢確認、上下頁-->
+	<page url="/0903/pageQuery" />
+	
+	<!-- 訊息代碼 -->
+	<page url="/ajax_getTbCodeDesc">
+		<field name="codeId"        length="10" 	isNull="N" />
+	</page>
+	
+	<!-- 預覽公告 -->
+	<page url="/ajax_getTbCodeDesc">
+		<field name="seq"        length="32" 	isNull="N" />
+	</page>
+	
+</application>
