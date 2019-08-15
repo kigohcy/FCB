@@ -87,6 +87,8 @@ public class ConfigServlet extends HttpServlet {
         String alert_sms_start        = StringEscapeUtils.escapeHtml((String)request.getParameter("alert_sms_start"));
         String alert_sms_telno        = StringEscapeUtils.escapeHtml((String)request.getParameter("alert_sms_telno"));
         String alert_sms_status       = StringEscapeUtils.escapeHtml((String)request.getParameter("alert_sms_status"));
+        String alert_except           = StringEscapeUtils.escapeHtml((String)request.getParameter("alert_except"));
+        
         
         LOG.debug("alert_frequency	  =["+alert_frequency	 +"]"); 			
         LOG.debug("alert_mail_receiver=["+alert_mail_receiver+"]");
@@ -97,6 +99,7 @@ public class ConfigServlet extends HttpServlet {
         LOG.debug("alert_sms_start    =["+alert_sms_start    +"]");
         LOG.debug("alert_sms_telno    =["+alert_sms_telno    +"]");
         LOG.debug("alert_sms_status   =["+alert_sms_status   +"]");
+        LOG.debug("alert_except       =["+alert_except       +"]");
         
     	try{
     		 if (ac == null){
@@ -117,6 +120,7 @@ public class ConfigServlet extends HttpServlet {
     		    sysParmService.updateSysParmByParmCode("ALERT_SMS_START",alert_sms_start);
     		    sysParmService.updateSysParmByParmCode("ALERT_SMS_STATUS",alert_sms_status);
     		    sysParmService.updateSysParmByParmCode("ALERT_SMS_TELNO",alert_sms_telno);
+    		    sysParmService.updateSysParmByParmCode("ALERT_EXCEPT",alert_except);
             	
         	
         }catch(Exception e){

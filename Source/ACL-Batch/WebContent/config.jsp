@@ -38,6 +38,7 @@
     String alert_sms_start     ="";
     String alert_sms_status    ="";
     String alert_sms_telno     ="";
+    String alert_except        ="";
     
    	 for (Iterator<SysParm> it = SysParmList.iterator(); it.hasNext();) {
 		SysParm SYPM = (SysParm) it.next();
@@ -50,6 +51,7 @@
 		if (SYPM.getParmCode().equals("ALERT_SMS_START"))    {alert_sms_start     =SYPM.getParmValue();}
 		if (SYPM.getParmCode().equals("ALERT_SMS_STATUS"))   {alert_sms_status    =SYPM.getParmValue();}
 		if (SYPM.getParmCode().equals("ALERT_SMS_TELNO"))    {alert_sms_telno     =SYPM.getParmValue();}
+		if (SYPM.getParmCode().equals("ALERT_EXCEPT"))       {alert_except        =SYPM.getParmValue();}
 	 }
 
 	try {
@@ -151,6 +153,13 @@
                   <input type="text" name="alert_sms_end" maxlength="5" size="5" value="<%=alert_sms_end%>">(時間格式hh:mm)，發送簡訊，其餘時間不發送
                 </td>
              </tr>
+             <tr>
+                <td  align='center'>不發送錯誤通知的錯誤代碼</td>
+                <td>
+                   <input type="text" name="alert_except" id="alert_except" size="90" value="<%=alert_except%>">
+                   <BR>(二個以上錯誤代碼以逗號分隔)
+                </td>
+			</tr>
 		</table>
 		<br>
 		<input type="submit" name="btn1" id="btn1" value="變更設定" >
