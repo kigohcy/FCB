@@ -76,7 +76,7 @@ try
 				<td align="center">
                     <input type="radio" name="batchId" value="JKOExchangeJob" />
                 </td>
-                <td>街口對帳檔產生批次</td>
+                <td>電商對帳檔產生批次</td>
                 <td><input type="text" name="inputDate" maxlength="8" size="8" value="">
                 	<span style="font-size:13px;">YYYYMMDD</span>
                 </td>

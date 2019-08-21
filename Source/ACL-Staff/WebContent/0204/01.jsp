@@ -327,7 +327,7 @@
 										<td align="right">
 											<c:choose>
 												<c:when test="${command.baseLimt[grad].trnsLimt  eq '0'}"><fmt:message key="F0204.field.noLimt" /></c:when><%--無限額 --%>
-												<c:otherwise>&lt;<fmt:formatNumber type="number" pattern="###,###,###" value="${command.baseLimt[grad].trnsLimt}" /></c:otherwise>
+												<c:otherwise>&le;<fmt:formatNumber type="number" pattern="###,###,###" value="${command.baseLimt[grad].trnsLimt}" /></c:otherwise>
 											</c:choose>
 										</td>
 										<td align="center">
@@ -348,7 +348,7 @@
 										<td align="right">
 										    <c:choose>
 												<c:when test="${command.baseLimt[grad].dayLimt  eq '0'}"><fmt:message key="F0204.field.noLimt" /></c:when><%--無限額 --%>
-												<c:otherwise>&lt;<fmt:formatNumber type="number" pattern="###,###,###" value="${command.baseLimt[grad].dayLimt}" /></c:otherwise>
+												<c:otherwise>&le;<fmt:formatNumber type="number" pattern="###,###,###" value="${command.baseLimt[grad].dayLimt}" /></c:otherwise>
 											</c:choose>
 										</td>
 										<td align="center">
@@ -369,7 +369,7 @@
 										<td align="right">
 											<c:choose>
 												<c:when test="${command.baseLimt[grad].mnthLimt  eq '0'}"><fmt:message key="F0204.field.noLimt" /></c:when><%--無限額 --%>
-												<c:otherwise>&lt;<fmt:formatNumber type="number" pattern="###,###,###" value="${command.baseLimt[grad].mnthLimt}" /></c:otherwise>
+												<c:otherwise>&le;<fmt:formatNumber type="number" pattern="###,###,###" value="${command.baseLimt[grad].mnthLimt}" /></c:otherwise>
 											</c:choose>
 										</td>
 										<td align="center">
