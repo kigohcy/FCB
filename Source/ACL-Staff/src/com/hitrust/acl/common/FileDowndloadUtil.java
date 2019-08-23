@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import com.hitrust.framework.model.Command;
 import com.hitrust.framework.util.DateUtil;
 import com.hitrust.acl.common.report.ExcelReport;
+import com.hitrust.acl.common.report.ExcelSxssfRpt;
 import com.hitrust.acl.util.StringUtil;
 
 /**
@@ -34,7 +35,8 @@ public class FileDowndloadUtil {
 	 */
 	public static void downExcel(Command command,String fileName,String templateName,HttpServletResponse response){
 		//產生excel
-		ExcelReport report=new ExcelReport(response);
+		//ExcelReport report=new ExcelReport(response);
+		ExcelSxssfRpt report=new ExcelSxssfRpt(response);
 		if(StringUtil.isBlank(fileName)){
 			report.setFileName(templateName+"_"+DateUtil.getCurrentTime("DT", "AD"));
 		}else{
