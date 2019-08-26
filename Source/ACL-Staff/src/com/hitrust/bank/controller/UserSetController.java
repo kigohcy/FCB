@@ -137,7 +137,14 @@ public class UserSetController extends BaseAutoCommandController {
 				staffuser.setReturnMsg(I18nConverter.i18nMapping("message.sys.insert.failure", user.getLocale() ) + ", 使用者已存在");
 				return;
 			}
+			
+			//20190826  新增直接寄信給客戶Begin
+			//userSetSrv.saveNewUser(staffuser);
+			String mema = CommonUtil.randomGenerator(8);
+			staffuser.setLoginMema(MAC.encryptePswd(mema));
 			userSetSrv.saveNewUser(staffuser);
+			sendMail(mema, staffuser);
+			//20190826  新增直接寄信給客戶End
 			staffuser.setReturnMsg(I18nConverter.i18nMapping("message.sys.insert.success", user.getLocale()));
 			
 		} catch (BusinessException e) {
