@@ -48,7 +48,7 @@ public class AuthenticationHelper {
     	String inputParams = "";
     	String outputParams= "";
     	WSResBean wsResBean = null;
-    	String key = "";
+    	String aesKey =  "";
     	String iv = "";
     	
     	try{
@@ -71,7 +71,7 @@ public class AuthenticationHelper {
     			if(authWsAesKey==null || authWsAesIv==null){
     				//
     			}else{
-    				key = authWsAesKey.getParmValue();
+    				aesKey = authWsAesKey.getParmValue();
         			iv  = authWsAesIv.getParmValue();
     			}
     			
@@ -81,7 +81,7 @@ public class AuthenticationHelper {
             	wsReqBean.setUSERCODE(userCode);
             	
             	String input = JsonUtil.object2Json(wsReqBean, false);
-            	inputParams = this.aesEncrypt(input, key, iv);
+            	inputParams = this.aesEncrypt(input, aesKey, iv);
             	
             	AuthenticationSoapProxy wsSoap = new AuthenticationSoapProxy();
             	AuthenticationRequest authReq = new AuthenticationRequest();
@@ -97,7 +97,7 @@ public class AuthenticationHelper {
     			LOG.info("[網銀回覆結果-解密前]: " + outputParams);
     			
     			//outputParams以AES256解密後,為JSON字串:RESULT,RANK,CODE,TYPE,ERRORMSG
-    			String out = this.aesDecrypt(outputParams, key, iv);
+    			String out = this.aesDecrypt(outputParams, aesKey, iv);
     			// v1.01, 增加網銀回覆結果-解密後 log
     			LOG.info("[網銀回覆結果-解密後]: " + out);
     			wsResBean = (WSResBean) JsonUtil.json2Object(out, WSResBean.class);

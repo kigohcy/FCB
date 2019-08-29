@@ -104,9 +104,7 @@ public class DBImp {
 
 		try {
 			//依據連結方式初始化DB環境
-			if (DATABASE_TYPE_DBPool.equals(dbConnType)) {
-			    initialDBPoolEnvironment();
-			} else if (DATABASE_TYPE_JDBC.equals(dbConnType)) {
+			if (DATABASE_TYPE_JDBC.equals(dbConnType)) {
 			    initialJDBCEnvironment();
 			} else if (DATABASE_TYPE_DATASOURCE.equals(dbConnType)) {
 			    initialDatasourceEnvironment();
@@ -136,9 +134,7 @@ public class DBImp {
 		
 		try{
 			//依據連結方式及DB Name取得Connection並回傳
-			if (DATABASE_TYPE_DBPool.equals(dbConnType)) {
-			    return getDBPoolConnection(dbName);
-			} else if (DATABASE_TYPE_JDBC.equals(dbConnType)) {
+			if (DATABASE_TYPE_JDBC.equals(dbConnType)) {
 			    return getJDBCConnection(dbName);
 			} else if (DATABASE_TYPE_DATASOURCE.equals(dbConnType)) {
 			    return getDSConnection(dbName);
@@ -152,42 +148,7 @@ public class DBImp {
 		return null;
 	}
 
-	/**
-	 * Initial DBPool environment
-	 * @throws SQLException - if initial DBPool object error occurs 
-	 * @throws Exception - if a database configuration access error occurs
-	 */
-	private void initialDBPoolEnvironment() throws SQLException, Exception {
-        this.dbPoolParams = new HashMap();
-        
-        //自database.xml取得DBPool設定值
-        NodeList dbPoolList = this.databaseDoc.getElementsByTagName(DATABASE_TYPE_DBPool);
-        for (int i=0; i<dbPoolList.getLength(); i++) {
-            Element dbPoolItem = (Element) dbPoolList.item(i);
-            
-            String dbPoolName = dbPoolItem.getAttribute("name");
-
-            //依據設定值初始化DBPool物件
-            DBPool dbp = new DBPool();
-            dbp.setDriverName(dbPoolItem.getAttribute("driverName"));
-            dbp.setJdbcURL(dbPoolItem.getAttribute("jdbcURL"));
-            dbp.setLoginUser(dbPoolItem.getAttribute("loginUser"));
-            //登入DB密碼需做解密動作
-            dbp.setLoginPswd(MAC.decryptePswd(dbPoolItem.getAttribute("loginPswd")));
-            dbp.setMaxConnections(Integer.parseInt(dbPoolItem.getAttribute("maxConnections")));
-            dbp.setIniConnections(Integer.parseInt(dbPoolItem.getAttribute("iniConnections")));
-            dbp.setIncConnections(Integer.parseInt(dbPoolItem.getAttribute("incConnections")));
-            dbp.setDbEncoding(dbPoolItem.getAttribute("dbEncoding"));
-            dbp.setVmEncoding(dbPoolItem.getAttribute("vmEncoding"));
-            dbp.setSendEncode(Integer.parseInt(dbPoolItem.getAttribute("sendEncode")));
-            dbp.setRecvEncode(Integer.parseInt(dbPoolItem.getAttribute("recvEncode")));
-            dbp.open();
-            
-            //以DBPool Name為Key, 將DBPool物件放置於HashMap中
-            this.dbPoolParams.put(dbPoolName, dbp);
-        }
-	}
-	 
+	
 	/**
 	 * Initial JDBC environment
 	 * @throws Exception - if a database configuration access error occurs
@@ -234,45 +195,7 @@ public class DBImp {
         }
 	}
 	 
-	/**
-	 * Get DBPool connection
-	 * @param dbPoolName - DBPool name
-	 * @return Connection - a connection from the DBPool 
-	 * @throws DBException - if a database access error occurs
-	 */
-	private synchronized Connection getDBPoolConnection(String dbPoolName) throws DBException {
-		
-        Connection conn = null;
-		
-        //檢查DBPool環境是否initial成功
-        if(this.dbPoolParams.isEmpty()) {
-            throw new DBException("DBPool environment not initial! ", ERR_DB_NOT_INIT);
-        }
-
-        try {
-            // 依據DBPool Name至HashMap中取出DBPool物件
-            if (this.dbPoolParams.containsKey(dbPoolName)) {
-            	DBPool dbPool = (DBPool) this.dbPoolParams.get(dbPoolName);
-            	//透由DBPool物件取得Connection
-                conn = dbPool.getConnection();
-            } else {
-            	// 在HashMap中找不到對應的DBPool物件
-            	throw new DBException("DBPool name isn't exist! ", ERR_DBP_NAME_NOT_CORR);
-            }
-        } catch(DBException ex){
-        	throw ex;
-        } catch(Exception ex) {
-        	LOG.error("DBPool get conneciton error! " + ex.toString());
-            throw new DBException(ex.getMessage(), ERR_DBP_GET_CONN);
-        }
-        
-        if (conn != null) {
-            return conn;
-        } else {
-        	LOG.error("DB connect times is great than retry count! ");
-            throw new DBException("DB connect times is great than retry count! ",ERR_DB_OVER_RETRY);
-        }
-	}
+	
 	 
 	/**
 	 * Get JDBC connection
@@ -400,36 +323,7 @@ public class DBImp {
 	}
 	 
 	
-    /**
-     * Return connection to DBPool
-     * @param conn - 欲歸還至DBPool的Connection
-     * @param dbPoolName - DBPool name
-     * @throws DBException - if DBPool retrun conneciton error occurs
-     */
-    private synchronized void returnConnectionToDBPool(Connection conn, String dbPoolName) throws DBException {
-    	
-        //檢查DBPool環境是否initial成功
-        if(this.dbPoolParams.isEmpty()) {
-            throw new DBException("DBPool environment not initial! ", ERR_DB_NOT_INIT);
-        }
-
-        try {
-            // 依據DBPool Name至HashMap中取出DBPool物件
-            if (this.dbPoolParams.containsKey(dbPoolName)) {
-            	DBPool dbPool = (DBPool) this.dbPoolParams.get(dbPoolName);
-            	//將connection還回至DBPool
-                dbPool.returnConnection(conn);
-            } else {
-            	// 在HashMap中找不到對應的DBPool物件
-            	throw new DBException("DBPool name isn't exist! ", ERR_DBP_NAME_NOT_CORR);
-            }
-        } catch(DBException ex){
-        	throw ex;
-        } catch(Exception ex) {
-        	LOG.error("Failed to reutrn connection into DBPool! " + ex.toString());
-            throw new DBException(ex.getMessage(), ERR_DB_RETURN_CONN);
-        }
-    }
+  
 	
 	/**
 	 * 歸還資料庫 Connection<br>
@@ -447,19 +341,11 @@ public class DBImp {
                     conn.commit();
                     conn.setAutoCommit(true);
                 }
-                //若為連結方式為DBPool, 則將connecton歸還至DBPool中
-        		if (DATABASE_TYPE_DBPool.equals(dbConnType)) {
-        			returnConnectionToDBPool(conn, dbName);
-        		}else{
+               
         			conn.close();
         			conn = null;
-        		}
             }
-        } catch (DBException ex){
-        	//v3.01 Log輸出調整
-			LOG.error("[dbName]"+dbName+"[dbConnType]"+dbConnType);
-        	LOG.error("Failed to reutrn connection! " + ex.toString());
-        } catch (SQLException ex) {
+        }  catch (SQLException ex) {
         	//v3.01 Log輸出調整
 			LOG.error("[dbName]"+dbName+"[dbConnType]"+dbConnType);
         	LOG.error("Failed to reutrn connection! " + ex.toString());

@@ -59,7 +59,7 @@
 <script type="text/javascript" src="<%=root%>/js/jquery.hoverIntent.js"></script>
 <script type="text/javascript" src="<%=root%>/js/acl.js"></script>
 
-<script type="text/javascript" src="<%=root%>/js/ckeditor/ckeditor.js"></script>
+
 <script type="text/javascript" src="<%=root%>/js/ckeditor/config.js"></script>
 
 <script type="text/javascript">
