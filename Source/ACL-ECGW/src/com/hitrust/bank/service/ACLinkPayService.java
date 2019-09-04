@@ -636,7 +636,22 @@ public class ACLinkPayService extends AbstractServiceModel {
 			} else {
 				transactionType = "1";
 			}
-			transactionResponseInfo = (TransactionResponseInfo) new TelegramBo().sendFCB91148W(ecData, trnsData, realAccount, trnsTime.substring(trnsTime.length() - 6), msgNo.substring(msgNo.length() - 4), transactionType, "debit", conn);
+			//20190904 存摺摘要分開扣款,儲值.繳費稅Begin
+			//transactionResponseInfo = (TransactionResponseInfo) new TelegramBo().sendFCB91148W(ecData, trnsData, realAccount, trnsTime.substring(trnsTime.length() - 6), msgNo.substring(msgNo.length() - 4), transactionType, "debit", conn);
+			String action="debit";
+			switch (trnsData.TRNS_TYPE) {
+			   case "A": //扣款
+				   action="debitA";
+				   break;
+			   case "E": //繳費稅
+				   action="debitE";
+				   break;
+			   default:  //儲值
+				   action="debitD";
+	            	
+			}
+			transactionResponseInfo = (TransactionResponseInfo) new TelegramBo().sendFCB91148W(ecData, trnsData, realAccount, trnsTime.substring(trnsTime.length() - 6), msgNo.substring(msgNo.length() - 4), transactionType, action, conn);
+			//20190904 存摺摘要分開扣款,儲值.繳費稅End
 			if ("M1AE".equals(transactionResponseInfo.getERR_CODE())) {
 				LOG.info("delayFlag錯誤..發送delayFlag查詢");
 				if (new TelegramBo().sendFCB911002_1("CCIVR", conn))

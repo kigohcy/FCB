@@ -298,18 +298,55 @@ public class TelegramBo {
 			String agencyCode=ecData.EC_ID;//平台代碼
 //			String cMemo = ecData.EC_NAME_CH;//平台名稱
 			String cMemo = APSystem.getProjectParam("EC_PAY_NAME_"+agencyCode);
+			
 			// jeff修改-set上行電文所需資訊 start
 			requestInfo.setPayerBank("00700000");// 轉出行號
 			
-			if("debit".equals(action)) { //扣款
-				if(cMemo.length()==2)
-					cMemo = cMemo+"扣款";
-				else
-					cMemo = cMemo+"扣";
+			//20190904 存摺摘要分開扣款,儲值.繳費稅Begin
+			
+			//if("debit".equals(action)) {
+			//if(cMemo.length()==2)
+		    //		cMemo = cMemo+"付款";
+			//else
+			//	cMemo = cMemo+"扣";
+			if (cMemo.isEmpty()) cMemo = ecData.EC_NAME_CH;
+			
+			if("debit".equals(action.substring(0,5))) {
+				//扣款
+				switch (action) {
+				   case "debitA": //扣款
+					   if(cMemo.length()==2)
+						  cMemo = cMemo+"付款";
+					   else if(cMemo.length()==3)
+						  cMemo = cMemo+"扣"; 
+					   else 
+						  cMemo = cMemo.substring(0,2)+"付款";
+					   break;
+				   case "debitE": //繳費稅
+					   if(cMemo.length()==2)
+						   cMemo = cMemo+"繳費";
+					   else if(cMemo.length()==3)
+						   cMemo = cMemo+"費";
+					  else
+						   cMemo = cMemo.substring(0,2)+"繳費";
+					   break;
+				   default:  //儲值 action="debitD"
+					   if(cMemo.length()==2)
+						  cMemo = cMemo+"儲值";
+					   else if(cMemo.length()==3)
+						  cMemo = cMemo+"儲";
+					  else
+						  cMemo = cMemo.substring(0,2)+"儲值";
+		            	
+				}
+				action="debit";
+			//20190904 存摺摘要分開扣款,儲值.繳費稅End	
 				requestInfo.setPayerAcctNo(realAccount);// 轉出帳號
 				requestInfo.setPayerID(StringUtil.paddingaddzero(trnsData.CUST_ID, 11, "R"));
 				requestInfo.setPayeeAcctNo("00000000000");// 轉入帳號
 				requestInfo.setPmtType("96");// 固定帶96
+				
+				
 			}else if("refund".equals(action)) { //退款
 				if(cMemo.length()==2)
 					cMemo = cMemo+"退款";
